@@ -1,5 +1,6 @@
+# %%
 import cadquery as cq
-from ocp_vscode import show_object
+from ocp_vscode import show_object, show
 
 fontpath = "/Users/hiroshi/Library/Fonts/BIZUDGothic-Regular.ttf"
 
@@ -27,7 +28,10 @@ text_3d = (
 text_plate = plate.union(text_3d)
 
 # 結果を表示
-show_object(text_plate, measure_tools=True, axes=True, grid=True)
+show(text_plate, measure_tools=True, axes=True, grid=True)
 
+# %%
 # 3DオブジェクトをSTLファイルとして保存
 cq.exporters.export(text_plate, "text_plate.stl")
+
+# %%
