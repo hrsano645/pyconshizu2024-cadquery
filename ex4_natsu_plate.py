@@ -2,7 +2,9 @@
 import cadquery as cq
 from ocp_vscode import show_object, show
 
+# フォントの設定(Macだとフォントパスの方が設定しやすそう？)
 fontpath = "/Users/hiroshi/Library/Fonts/BIZUDGothic-Regular.ttf"
+
 
 src_text = "25°　夏日\n30°真夏日"
 
