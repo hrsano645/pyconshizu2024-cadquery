@@ -21,7 +21,6 @@ text_3d = (
         14,
         3,
         fontPath=fontpath,
-        # kind="bold",
     )
     .translate((0, 0, 2.5))
 )
