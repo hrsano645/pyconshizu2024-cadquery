@@ -6,9 +6,7 @@ from ocp_vscode import show_object, show
 # 蓋付きの入れ物を作ってみよう
 
 # まず下側から作る。円筒を作る。shellで壁を作る。
-ex2_iremono = (
-    cq.Workplane("XY").circle(100).extrude(50).faces(">Z").workplane().shell(-4)
-)
+ex2_iremono = cq.Workplane("XY").circle(100).extrude(50).faces(">Z").shell(-4)
 
 # ふたを作る
 ex2_futa = (

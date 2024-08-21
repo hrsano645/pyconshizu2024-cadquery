@@ -8,8 +8,8 @@ ex1_box = cq.Workplane("XY").box(10, 10, 10)
 show_object(ex1_box, name="ex1_box", measure_tools=True)
 
 # 次に 内側をくりぬいていく。壁の厚みは 2mm
-# まずは、外側の壁を作る,  次に内側の壁を作る: shellで内部をくりぬく
-ex1_hako = cq.Workplane("XY").box(10, 10, 10).faces(">Z").workplane().shell(-2)
+# まずは、外側の壁を作る,  次に内側の壁を作る: 内部がくり抜かれている様な形になる
+ex1_hako = cq.Workplane("XY").box(10, 10, 10).faces(">Z").shell(-2)
 # translateで移動させる
 show_object(ex1_hako.translate((20, 0, 0)), name="ex1_hako", measure_tools=True)
 
