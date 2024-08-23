@@ -1,5 +1,5 @@
 import cadquery as cq
-from ocp_vscode import show_object, show
+from ocp_vscode import show_object
 
 # 単位は全部mmとしています
 

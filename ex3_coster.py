@@ -1,6 +1,5 @@
 import cadquery as cq
-from ocp_vscode import show_object, show
-from pathlib import Path
+from ocp_vscode import show_object
 
 # Python logoを使ってコースターを作ってみる
 
