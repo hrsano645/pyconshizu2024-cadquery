@@ -26,7 +26,7 @@ base_plate = (
     .edges("|Z")
     .fillet(2)
 )
-# show_object(base_plate, measure_tools=True, axes=True, grid=True)
+show_object(base_plate, name="base_plate", measure_tools=True, axes=True, grid=True)
 
 # 右側に温湿度計を乗せる窪みを作る
 # 窪み様のモデルを作る: 82 x 68 で2mm窪ませる。
@@ -45,9 +45,9 @@ print(f"窪みの移動量: {move_x=}, {move_y=}")
 kubomi = kubomi.translate((move_x, move_y, 2))
 
 # 窪みをプレートから切り抜く
-# show_object(kubomi, measure_tools=True, axes=True, grid=True)
+show_object(kubomi, name="kubomi", measure_tools=True, axes=True, grid=True)
 base_plate = base_plate.cut(kubomi)
-# show_object(base_plate, measure_tools=True, axes=True, grid=True)
+show_object(base_plate, name="cut base_plate", measure_tools=True, axes=True, grid=True)
 
 # プレートにテキストを配置
 text_3d = (
@@ -61,6 +61,12 @@ text_3d = (
     .translate((44, 0, 2.5))
 )
 
+# テキストのバウンディングボックスを表示
+text_3d_bounds = text_3d.val().BoundingBox()
+show_object(
+    text_3d_bounds, name="text_3d_bounds", measure_tools=True, axes=True, grid=True
+)
+
 # プレートにテキストを配置
 text_base_plate = base_plate.union(text_3d)
 
@@ -70,5 +76,7 @@ show_object(text_base_plate, measure_tools=True, axes=True, grid=True)
 # %%
 # 3DオブジェクトをSTLファイルとして保存
 cq.exporters.export(text_base_plate, "natsu_plate.stl")
+# stepファイルとして保存
+cq.exporters.export(text_base_plate, "natsu_plate.step")
 
 # %%
