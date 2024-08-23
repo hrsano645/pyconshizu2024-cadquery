@@ -6,7 +6,7 @@ from ocp_vscode import show_object
 
 # フォントの設定(Macだとフォントパスの方が設定しやすそう？)
 fontpath = "/Users/hiroshi/Library/Fonts/BIZUDGothic-Regular.ttf"
-src_text = "【危険温度】\n25:　夏日\n30:真夏日\n35:猛暑日\n40:酷暑日"
+src_text = "【危険温度】\n25:　夏日\n30:真夏日\n35:猛暑日"
 
 # モデルのサイズ
 base_plate_width = 160
@@ -65,7 +65,9 @@ text_3d = (
 text_base_plate = base_plate.union(text_3d)
 
 # 結果を表示
-show_object(text_base_plate, measure_tools=True, axes=True, grid=True)
+show_object(
+    text_base_plate, name="text_base_plate", measure_tools=True, axes=True, grid=True
+)
 
 # %%
 # 3DオブジェクトをSTLファイルとして保存
