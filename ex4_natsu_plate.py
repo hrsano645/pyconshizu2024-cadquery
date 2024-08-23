@@ -61,12 +61,6 @@ text_3d = (
     .translate((44, 0, 2.5))
 )
 
-# テキストのバウンディングボックスを表示
-text_3d_bounds = text_3d.val().BoundingBox()
-show_object(
-    text_3d_bounds, name="text_3d_bounds", measure_tools=True, axes=True, grid=True
-)
-
 # プレートにテキストを配置
 text_base_plate = base_plate.union(text_3d)
 
