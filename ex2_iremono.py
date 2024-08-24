@@ -1,9 +1,7 @@
+# ※単位は全部mmとしています
+# デモ：蓋付きの入れ物を作る
 import cadquery as cq
 from ocp_vscode import show_object
-
-# 単位は全部mmとしています
-
-# 蓋付きの入れ物を作ってみよう
 
 # まず下側から作る。円筒を作る。shellで壁を作る。
 ex2_iremono = (

@@ -1,7 +1,7 @@
+# ※単位は全部mmとしています
+# デモ：Pythonロゴを使ってコースターを作る
 import cadquery as cq
 from ocp_vscode import show_object
-
-# Python logoを使ってコースターを作ってみる
 
 # コースターのサイズ * 厚み 100mm x 6mm
 coaster_size = 100
