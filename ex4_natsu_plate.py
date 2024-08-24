@@ -71,8 +71,8 @@ show_object(
 
 # %%
 # 3DオブジェクトをSTLファイルとして保存
-cq.exporters.export(text_base_plate, "natsu_plate.stl")
+cq.exporters.export(text_base_plate, "exports/natsu_plate.stl")
 # stepファイルとして保存
-cq.exporters.export(text_base_plate, "natsu_plate.step")
+cq.exporters.export(text_base_plate, "exports/natsu_plate.step")
 
 # %%

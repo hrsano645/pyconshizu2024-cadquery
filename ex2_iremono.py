@@ -45,5 +45,5 @@ show_object(ex2_futa.translate((220, 0, 0)), name="ex2_futa", measure_tools=True
 # )
 
 # STLで書き出す
-cq.exporters.export(ex2_iremono, "ex2_iremono.stl")
-cq.exporters.export(ex2_futa, "ex2_futa.stl")
+cq.exporters.export(ex2_iremono, "exports/ex2_iremono.stl")
+cq.exporters.export(ex2_futa, "exports/ex2_futa.stl")

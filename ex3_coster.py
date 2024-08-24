@@ -7,7 +7,7 @@ from ocp_vscode import show_object
 # https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg
 
 # ファイルを読み込む
-python_logo_rinkaku = cq.importers.importDXF("python-logo-only_rinkaku.dxf")
+python_logo_rinkaku = cq.importers.importDXF("asset/python-logo-only_rinkaku.dxf")
 # show_object(python_logo_rinkaku, name="Python Logo", measure_tools=True)
 
 # 輪郭のみを取り出して押し出し
