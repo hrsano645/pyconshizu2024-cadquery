@@ -8,13 +8,13 @@ from ocp_vscode import show_object
 fontpath = "/Users/hiroshi/Library/Fonts/BIZUDGothic-Regular.ttf"
 
 # モデルのサイズ
-base_plate_width = 160
-base_plate_height = 80
+base_plate_width = 150
+base_plate_height = 100
 base_plate_thickness = 5
 
 # 窪みのサイズとクリアランス
-kubomi_width = 82
-kubomi_height = 68
+kubomi_width = 68
+kubomi_height = 82
 kubomi_thickness = 2
 kubomi_clearance = 2
 
@@ -60,7 +60,7 @@ text_3d = (
         2,
         fontPath=fontpath,
     )
-    .translate((44, 0, 2.5))
+    .translate((38, 0, 2.5))
 )
 text_base_plate = base_plate.union(text_3d)
 
