@@ -27,7 +27,7 @@ logo_obj = (
 )
 # show_object(logo_obj, name="Python Logo model")
 
-# コースターの土台を作る
+# コースターの土台を作る。円筒を作り下面の外周にフィレットをかける
 coaster_base = (
     cq.Workplane("XY")
     .cylinder(coaster_tickness, coaster_size)
@@ -38,6 +38,8 @@ coaster_base = (
             coaster_tickness / 2,
         )
     )
+    .faces("-Z")
+    .fillet(2)
 )
 # show_object(coaster_base, name="Coaster base")
 
