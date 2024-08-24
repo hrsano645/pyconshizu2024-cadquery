@@ -38,7 +38,7 @@ coaster_base = (
             coaster_tickness / 2,
         )
     )
-    .faces("-Z")
+    .faces(">X")
     .fillet(2)
 )
 # show_object(coaster_base, name="Coaster base")
