@@ -5,7 +5,7 @@ from ocp_vscode import show_object
 
 # コースターの半径 * 厚み 50mm x 6mm
 coaster_size = 50
-coaster_tickness = 6
+coaster_tickness = 4
 
 # Python logoのデータを取得 svgから輪郭を取りdxfにしたファイルを呼び出す
 # https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg
@@ -25,7 +25,7 @@ logo_obj = (
     .extrude(6)
     .translate((0, 0, 3))
 )
-# show_object(logo_obj, name="Python Logo model")
+# show_object(logo_obj, name="Python Logo model", measure_tools=True)
 
 # コースターの土台を作る。円筒を作り下面の外周にフィレットをかける
 coaster_base = (
@@ -39,21 +39,15 @@ coaster_base = (
         )
     )
     .faces(">X")
-    .fillet(2)
+    .fillet(0.5)
 )
-# show_object(coaster_base, name="Coaster base")
+# show_object(coaster_base, name="Coaster base", measure_tools=True)
 
 # 輪郭をコースターに切り抜く
 coaster_result = coaster_base.cut(logo_obj)
 
 # 対象を表示
-show_object(coaster_result, name="Coaster with Python Logo")
+show_object(coaster_result, name="Coaster with Python Logo", measure_tools=True)
 
 # STLで書き出す: トレランスを細かくして輪郭を綺麗にする
 cq.exporters.export(coaster_result, "exports/ex3_coster.stl", tolerance=0.001)
-
-# TODO, この先考えるべきところ（応用として）
-# 1️. ロゴのサイズに合わせて位置の自動調整は、どうするか？
-#  -> まずロゴのバウンディングボックス（BoundingBox）を作り、そこから正確な大きさを元に位置を調整する
-# 2. コースターのサイズで、ロゴのサイズに合わせて拡大縮小する方法は？_
-#  -> （BoundingBox）で大きさをとった後に適切な拡大率でスケールすればいい
