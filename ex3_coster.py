@@ -3,14 +3,14 @@
 import cadquery as cq
 from ocp_vscode import show_object
 
-# コースターのサイズ * 厚み 100mm x 6mm
-coaster_size = 100
+# コースターの半径 * 厚み 50mm x 6mm
+coaster_size = 50
 coaster_tickness = 6
 
 # Python logoのデータを取得 svgから輪郭を取りdxfにしたファイルを呼び出す
 # https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg
-# おおよそ、縦横112mm
-logo_size = 112
+# 縮小調整した結果、おおよそ縦横56mm、輪郭全体の中心が原点になるように調整済み
+logo_size = 56
 
 # ファイルを読み込む
 python_logo_rinkaku = cq.importers.importDXF("asset/python-logo-only_rinkaku.dxf")
@@ -23,7 +23,7 @@ logo_obj = (
     .wires()
     .toPending()
     .extrude(6)
-    .translate((-(logo_size / 2), -(logo_size / 2), 3))
+    .translate((0, 0, 3))
 )
 # show_object(logo_obj, name="Python Logo model")
 
