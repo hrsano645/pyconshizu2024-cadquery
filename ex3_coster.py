@@ -49,8 +49,8 @@ coaster_result = coaster_base.cut(logo_obj)
 # 対象を表示
 show_object(coaster_result, name="Coaster with Python Logo")
 
-# STLで書き出す
-cq.exporters.export(coaster_result, "exports/ex3_coster.stl")
+# STLで書き出す: トレランスを細かくして輪郭を綺麗にする
+cq.exporters.export(coaster_result, "exports/ex3_coster.stl", tolerance=0.001)
 
 # TODO, この先考えるべきところ（応用として）
 # 1️. ロゴのサイズに合わせて位置の自動調整は、どうするか？
