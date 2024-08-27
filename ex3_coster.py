@@ -5,7 +5,7 @@ from ocp_vscode import show_object
 
 # コースターの半径 * 厚み 50mm x 6mm
 coaster_size = 50
-coaster_tickness = 4
+coaster_tickness = 3
 
 # Python logoのデータを取得 svgから輪郭を取りdxfにしたファイルを呼び出す
 # https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg
@@ -22,8 +22,8 @@ logo_obj = (
     .add(python_logo_rinkaku)
     .wires()
     .toPending()
-    .extrude(6)
-    .translate((0, 0, 3))
+    .extrude(3)
+    .translate((0, 0, 2))
 )
 # show_object(logo_obj, name="Python Logo model", measure_tools=True)
 
@@ -51,3 +51,4 @@ show_object(coaster_result, name="Coaster with Python Logo", measure_tools=True)
 
 # STLで書き出す: トレランスを細かくして輪郭を綺麗にする
 cq.exporters.export(coaster_result, "exports/ex3_coster.stl", tolerance=0.001)
+cq.exporters.export(coaster_result, "exports/ex3_coster.step", tolerance=0.001)
