@@ -31,15 +31,15 @@ ex2_futa = (
 ex2_futa = ex2_futa.faces(">Z").workplane().circle(10).cutThruAll()
 
 # 最後に表示
-show_object(ex2_iremono, name="ex2_iremono", measure_tools=True)
-show_object(ex2_futa.translate((220, 0, 0)), name="ex2_futa", measure_tools=True)
+show_object(ex2_iremono, name="ex2_iremono")
+show_object(ex2_futa.translate((220, 0, 0)), name="ex2_futa")
 
 # show関数を使って表示する例(2つのオブジェクトを表示)
 # show(
 #     ex2_iremono,
 #     ex2_futa.translate((220, 0, 0)),
 #     names=["ex2_iremono", "ex2_futa"],
-#     measure_tools=True,
+#     ,
 # )
 
 # STLで書き出す
