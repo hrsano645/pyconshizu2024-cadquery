@@ -3,27 +3,32 @@
 import cadquery as cq
 from ocp_vscode import show_object
 
-# まず下側から作る。円筒を作る。shellで壁を作る。
+# まず下側から作る。
+# 円筒を作る -> shellで壁を作る -> 下側（Zのマイナス側）の面にフィレット処理
+#
 ex2_iremono = (
     cq.Workplane("XY")
-    .circle(100)
+    .circle(50)
     .extrude(50)
     .faces(">Z")
     .shell(-4)
     .faces("<Z")
+    .edges()
     .fillet(6)
 )
 
 # ふたを作る
+# 円筒を作る -> 作った円筒の上にまた円筒を作る -> 下側の面にフィレット処理
 ex2_futa = (
     cq.Workplane("XY")
-    .circle(100)
+    .circle(50)
     .extrude(10)
     .faces(">Z")
     .workplane()
-    .circle(92)
+    .circle(50 - 6)
     .extrude(4)
     .faces("<Z")
+    .edges()
     .fillet(6)
 )
 
@@ -32,14 +37,13 @@ ex2_futa = ex2_futa.faces(">Z").workplane().circle(10).cutThruAll()
 
 # 最後に表示
 show_object(ex2_iremono, name="ex2_iremono")
-show_object(ex2_futa.translate((220, 0, 0)), name="ex2_futa")
+show_object(ex2_futa.translate((120, 0, 0)), name="ex2_futa")
 
 # show関数を使って表示する例(2つのオブジェクトを表示)
 # show(
 #     ex2_iremono,
 #     ex2_futa.translate((220, 0, 0)),
 #     names=["ex2_iremono", "ex2_futa"],
-#     ,
 # )
 
 # STLで書き出す
