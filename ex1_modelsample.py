@@ -30,7 +30,7 @@ show_object(
     ex1_cylinder.translate((60, 0, 0)),
     name="ex1_cylinder",
 )
-html  # shelling-to-create-thin-features
+
 # 内側をくりぬいていく。壁の厚みは 1mm
 # まず立方体を作り壁を作る。shellを使いくり抜く
 # Z方向のfaces（面）を指示すると、その面を基準に空洞が作られる
@@ -40,4 +40,4 @@ show_object(
     ex1_hako.translate((80, 0, 0)),
     name="ex1_hako",
 )
-# ref: https://cadquery.readthedocs.io/en/latest/examples.
+# ref: https://cadquery.readthedocs.io/en/latest/examples.html#shelling-to-create-thin-features
