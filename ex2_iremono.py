@@ -9,12 +9,12 @@ from ocp_vscode import show_object
 ex2_iremono = (
     cq.Workplane("XY")
     .circle(50)
-    .extrude(50)
+    .extrude(50)  # 高さ50mmの円筒を作る
     .faces(">Z")
-    .shell(-4)
+    .shell(-4)  # 壁の厚み4mm
     .faces("<Z")
-    .edges()
-    .fillet(6)
+    .edges()  # 下側の面からエッジを取得
+    .fillet(6)  # フィレット処理
 )
 
 # ふたを作る
@@ -42,10 +42,10 @@ show_object(ex2_futa.translate((120, 0, 0)), name="ex2_futa")
 # show関数を使って表示する例(2つのオブジェクトを表示)
 # show(
 #     ex2_iremono,
-#     ex2_futa.translate((220, 0, 0)),
+#     ex2_futa.translate((120, 0, 0)),
 #     names=["ex2_iremono", "ex2_futa"],
 # )
 
-# STLで書き出す
+# STLで書き出す：torelanceでメッシュの精度を細かくする
 cq.exporters.export(ex2_iremono, "exports/ex2_iremono.stl", tolerance=0.001)
 cq.exporters.export(ex2_futa, "exports/ex2_futa.stl", tolerance=0.001)
