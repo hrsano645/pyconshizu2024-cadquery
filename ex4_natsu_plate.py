@@ -5,7 +5,7 @@ from ocp_vscode import show_object
 
 # 各種設定
 # フォントの設定(Macだとフォントパスの方が設定しやすそう？)
-fontpath = "/Users/hiroshi/Library/Fonts/BIZUDGothic-Regular.ttf"
+fontpath = ""
 
 # モデルのサイズ
 base_plate_width = 150
