@@ -1,6 +1,6 @@
 # pyconshizu2024-cadquery
 
-PyCon mini Shizuoka 2024で利用するCadQueryのサンプルコード
+PyCon mini Shizuoka 2024、PyCon JP 2024で利用するCadQueryのサンプルコード
 
 ## 環境の用意
 
