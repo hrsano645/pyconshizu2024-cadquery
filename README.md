@@ -9,8 +9,8 @@ PyCon mini Shizuoka 2024で利用するCadQueryのサンプルコード
 * Python 3.11
 * VSCode（説明でvscodeの拡張機能を利用します）
 * [OCP CAD Viewer](https://marketplace.visualstudio.com/items?itemName=bernhard-42.ocp-cad-viewer)
-* Mシリーズ Macでは conda環境が必要です。（miniforgeでテスト済み）
-* Windowsの場合はpipが利用できます。
+* Apple Silicon Macでは conda環境が必要です。（miniforge + mambaにてテスト済み）
+* Windowsの場合はpip + venvが利用できます。
 
 ### Mシリーズ Mac
 
