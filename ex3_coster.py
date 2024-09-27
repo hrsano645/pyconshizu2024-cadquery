@@ -14,7 +14,7 @@ logo_size = 56
 
 # ファイルを読み込む
 python_logo_rinkaku = cq.importers.importDXF("asset/python-logo-only_rinkaku.dxf")
-# show_object(python_logo_rinkaku, name="Python Logo")
+show_object(python_logo_rinkaku, name="Python Logo")
 
 # 輪郭のみを取り出して押し出し、中心位置に持ってくる
 # DXFからワイヤーのみ(wires)を取り出す（toPending）、押し出す（extrude）
@@ -26,10 +26,10 @@ logo_obj = (
     .extrude(3)
     .translate((0, 0, 2))
 )
-# show_object(
-#     logo_obj,
-#     name="Python Logo model",
-# )
+show_object(
+    logo_obj,
+    name="Python Logo model",
+)
 
 # コースターの土台を作る。円筒を作り下面の外周にフィレットをかける
 coaster_base = (
@@ -45,10 +45,10 @@ coaster_base = (
     .faces(">X")
     .fillet(0.5)
 )
-# show_object(
-#     coaster_base,
-#     name="Coaster base",
-# )
+show_object(
+    coaster_base,
+    name="Coaster base",
+)
 
 # 輪郭をコースターに切り抜く
 coaster_result = coaster_base.cut(logo_obj)
