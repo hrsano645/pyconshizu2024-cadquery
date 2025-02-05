@@ -14,7 +14,7 @@ logo_size = 56
 
 # ファイルを読み込む
 python_logo_rinkaku = cq.importers.importDXF("asset/python-logo-only_rinkaku.dxf")
-# show_object(python_logo_rinkaku, name="Python Logo")
+show_object(python_logo_rinkaku, name="Python Logo")
 
 # 輪郭のみを取り出して押し出し、中心位置に持ってくる
 # DXFからワイヤーのみ(wires)を取り出す（toPending）、押し出す（extrude）

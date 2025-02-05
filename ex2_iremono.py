@@ -22,14 +22,14 @@ ex2_iremono = (
 ex2_futa = (
     cq.Workplane("XY")
     .circle(50)
-    .extrude(10)
+    .extrude(10)  # 高さ10mmの円筒を作る
     .faces(">Z")
-    .workplane()
+    .workplane()  # 作った円筒の上に新しいワークプレーンを作る
     .circle(50 - 6)
-    .extrude(4)
+    .extrude(4)  # 径を小さくした高さ4mmの円筒を作る
     .faces("<Z")
-    .edges()
-    .fillet(6)
+    .edges()  # 下側の面からエッジを取得
+    .fillet(6)  # フィレット処理
 )
 
 # 蓋を取りやすい様に、蓋の中央に穴を開ける

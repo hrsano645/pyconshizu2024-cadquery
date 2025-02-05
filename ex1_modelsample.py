@@ -17,25 +17,25 @@ show_object(
     name="ex1_sphere",
 )
 
-# 多角形：5角形で例。最初に2Dで図形を書いて押し出している。直径10mmの5角形
-ex1_pentagon = cq.Workplane("XY").polygon(5, 10).extrude(10)
-show_object(
-    ex1_pentagon.translate((40, 0, 0)),
-    name="ex1_pentagon",
-)
-
 # 円筒2種類の作り方
 # 2Dで円を書いてから押し出す方法
 ex1_cylinder_2d = cq.Workplane("XY").circle(6).extrude(10)
 show_object(
-    ex1_cylinder_2d.translate((60, 0, 0)),
+    ex1_cylinder_2d.translate((40, 0, 0)),
     name="ex1_cylinder_2d",
 )
 # 3Dのcylinderを使う方法
 ex1_cylinder_3d = cq.Workplane("XY").cylinder(10, 6)
 show_object(
-    ex1_cylinder_3d.translate((80, 0, 0)),
+    ex1_cylinder_3d.translate((60, 0, 0)),
     name="ex1_cylinder_3d",
+)
+
+# 多角形：5角形で例。最初に2Dで図形を書いて押し出している。5角形
+ex1_pentagon = cq.Workplane("XY").polygon(5, 10).extrude(10)
+show_object(
+    ex1_pentagon.translate((80, 0, 0)),
+    name="ex1_pentagon",
 )
 
 # 内側をくりぬいていく。壁の厚みは 1mm
