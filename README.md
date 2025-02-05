@@ -2,6 +2,11 @@
 
 CadQueryのサンプルコード。以下のカンファレンスイベントで利用しています。
 
+* [PyCon JP 2024](https://2024.pycon.jp/ja) 2024年11月に開催。
+  * トークセッション詳細：<https://2024.pycon.jp/ja/talk/PLGWSS>
+* [PyCon mini Shizuoka 2024 continue](https://shizuoka.pycon.jp/2024-continue/) 2025年2月に開催。
+  * トークセッション詳細：<https://shizuoka.pycon.jp/2024-continue/info>
+  
 ## 環境の用意
 
 ### 検証した環境
@@ -24,8 +29,9 @@ VSCodeのメニューからコンテナで開くを選択します
 DevcontainerではOCP CAD Viewerのインストールも自動で行われます。そのためすぐにサンプルコードが動作できます。
 
 ※OCP CAD Viewerでパッケージ管理も行えるため、最新のパッケージインストールをアナウンスされる可能性があります。
+※動作環境では一番処理が遅い可能性があります。
 
-### Mシリーズ Mac
+### Apple Silicon Mac
 
 ※基本的に ocp-cad-viewerのREDAMEの手順に従ってください。簡易的な手順を残します。
 <https://github.com/bernhard-42/vscode-ocp-cad-viewer?tab=readme-ov-file#installation-1:~:text=On%20Silicon%20Macs%20(ARM%20CPU)>
