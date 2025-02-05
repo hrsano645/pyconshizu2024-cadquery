@@ -6,15 +6,19 @@ CadQueryのサンプルコード。以下のカンファレンスイベントで
   * トークセッション詳細：<https://2024.pycon.jp/ja/talk/PLGWSS>
 * [PyCon mini Shizuoka 2024 continue](https://shizuoka.pycon.jp/2024-continue/) 2025年2月に開催。
   * トークセッション詳細：<https://shizuoka.pycon.jp/2024-continue/info>
-  
+
+スライド資料（PyCon mini Shizuoka 2024 continueのものを参照します）
+
+<https://docs.google.com/presentation/d/1LQ3Kg1qNrr6Eok8OD8iSYTjvIK89a2t5DPaxbYE2m9s/edit?usp=sharing>
+
 ## 環境の用意
 
 ### 検証した環境
 
-* Python 3.11
 * VSCode（説明でvscodeの拡張機能を利用します）
 * Dockerでの動作を推奨とします。VSCodeのdevcontainerを利用しています。
 * その他環境（Apple Silicon Mac、Windows）でも動作することを確認しています。Docker環境より高速に動作すると思われます。
+  * Python 3.11
   * VSCodeの拡張機能をインストールします。[OCP CAD Viewer](https://marketplace.visualstudio.com/items?itemName=bernhard-42.ocp-cad-viewer)
   * Apple Silicon Macでは conda環境が必要です。（miniforge + mambaにてテスト済み）
   * Windowsの場合はpip + venvが利用できます。
