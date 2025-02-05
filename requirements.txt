@@ -1,0 +1,3 @@
+cadquery
+ocp_vscode
+ocp_tessellate
