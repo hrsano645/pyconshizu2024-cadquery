@@ -1,0 +1,26 @@
+{
+    "name": "pyconshizu2024-cadquery-env",
+    "build": {
+        "context": "..",
+        "dockerfile": "../Dockerfile",
+        "options": [
+            "--platform=linux/amd64"
+        ]
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "ms-python.vscode-pylance",
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "mtsmfm.vscode-stl-viewer",
+                "DavidAnson.vscode-markdownlint",
+                "ms-azuretools.vscode-docker",
+                "mhutchie.git-graph",
+                "bernhard-42.ocp-cad-viewer"
+            ]
+        }
+    }
+}

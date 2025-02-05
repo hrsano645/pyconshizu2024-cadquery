@@ -1,6 +1,6 @@
 # pyconshizu2024-cadquery
 
-PyCon mini Shizuoka 2024、PyCon JP 2024で利用するCadQueryのサンプルコード
+CadQueryのサンプルコード。以下のカンファレンスイベントで利用しています。
 
 ## 環境の用意
 
@@ -8,9 +8,22 @@ PyCon mini Shizuoka 2024、PyCon JP 2024で利用するCadQueryのサンプル�
 
 * Python 3.11
 * VSCode（説明でvscodeの拡張機能を利用します）
-* [OCP CAD Viewer](https://marketplace.visualstudio.com/items?itemName=bernhard-42.ocp-cad-viewer)
-* Apple Silicon Macでは conda環境が必要です。（miniforge + mambaにてテスト済み）
-* Windowsの場合はpip + venvが利用できます。
+* Dockerでの動作を推奨とします。VSCodeのdevcontainerを利用しています。
+* その他環境（Apple Silicon Mac、Windows）でも動作することを確認しています。Docker環境より高速に動作すると思われます。
+  * VSCodeの拡張機能をインストールします。[OCP CAD Viewer](https://marketplace.visualstudio.com/items?itemName=bernhard-42.ocp-cad-viewer)
+  * Apple Silicon Macでは conda環境が必要です。（miniforge + mambaにてテスト済み）
+  * Windowsの場合はpip + venvが利用できます。
+
+### VSCode Devcontainer
+
+このリポジトリをVSCodeで開くことで、devcontainerの環境を使い動作させることができます。Win, Macどちらとも動作します。（その他OSは未確認ですが動作すると思われます）
+
+Dockerがインストールされている状態で、VSCodeでgit cloneを行います。
+VSCodeのメニューからコンテナで開くを選択します
+
+DevcontainerではOCP CAD Viewerのインストールも自動で行われます。そのためすぐにサンプルコードが動作できます。
+
+※OCP CAD Viewerでパッケージ管理も行えるため、最新のパッケージインストールをアナウンスされる可能性があります。
 
 ### Mシリーズ Mac
 
